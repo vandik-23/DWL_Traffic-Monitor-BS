@@ -1,0 +1,58 @@
+# Install/build python3.9 in the Cloud9 Linux session.
+
+# PHASE 1:
+
+cd /opt
+sudo wget https://www.python.org/ftp/python/3.9.6/Python-3.9.6.tgz
+sudo tar xzf Python-3.9.6.tgz
+cd Python-3.9.6
+sudo ./configure --enable-optimizations
+sudo make altinstall
+sudo rm -f /opt/Python-3.9.6.tgz
+
+# PHASE 2: Create a virtual environment in python 3.9 and add the needed libraries/packages
+
+mkdir folder
+cd folder
+virtualenv v-env --python=python3.9
+source ./v-env/bin/activate
+pip install pandas
+pip install numpy
+pip install datetime
+pip install requests
+pip install psycopg2-binary
+
+
+pip freeze >> requirements.txt
+ls
+nano requirements.txt
+
+
+deactivate
+
+# PHASE 3: Ship all the libraries/packages into the AWS lambda service
+
+mkdir python
+cd python
+cp -r ../v-env/lib/python3.9/site-packages/* .
+cd ..
+zip -r my_custom_layer.zip python
+aws lambda publish-layer-version --layer-name my_custom_lambda_layer --zip-file fileb://my_custom_layer.zip --compatible-runtimes python3.9
+
+# PHASE 4: See the expected response and enjoy the result. The layer is available on your lambda service.
+
+{
+    "LayerVersionArn": "arn:aws:lambda:us-east-1:476102943659:layer:pandas:1",
+    "Description": "",
+    "CreatedDate": "2021-11-24T23:29:32.962+0000",
+    "LayerArn": "arn:aws:lambda:us-east-1:476102943659:layer:pandas",
+    "Content": {
+        "CodeSize": 46365870,
+        "CodeSha256": "2WIBKi0fRqPx8ZRXGKrdO3dBYnehUcJLuusml86Yvz0=",
+        "Location": "https://prod-04-2014-layers.s3.us-east-1.amazonaws.com/snapshots/476102943659/pandas-60d18771-79e0-475d-bb41-e83752a16167?versionId=.QDZCJomSUkX7kG_LxQEtKS2_b8QCdq6&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEJ%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJIMEYCIQDE4KuNeqI5uY92SfbqPKmcSR7A%2BI2jp29kMw8xlYDm%2BgIhAPNdAflr7OQXed%2BeQoodLWDyA9luHPx6M1wcPEjnpHNuKvoDCGcQABoMNzQ5Njc4OTAyODM5IgzmgtZ2AqWvxHeVL5Yq1wOqqtRg4GX0L7n%2B6etb7NknL21s%2FLFOTzahb7ox6jsqDZVvODFfb0cLIKFzoNYgdBb5lN2%2FLYLofLa%2FiaqNEt7wZl2lpDX%2BMblv%2FOUyv05mpYiT45Bv83jW6a5sLMI4Zn3wSDzRq1mwM4W4CRby7%2FX3V4h2rZoRpbiMUoNC1Dq%2F%2Bi6lP8Hrwl7vHw9yBGecVK0Mobu6zyvd%2BMzHurb6PHi%2FY5Hio8IiZqZgwpQiNN18k9k2%2F88RbCmdNm9mT93JcfXyqiowD%2BzJyhSigEepU%2BE%2F3gDcd%2BGYewGIQvx4l5XwwC78quh9iJ%2F7x3hH93b%2FbqajfPNjz88dKrdeUt2OWgeRApCv0b1EIac0YAZ5rFnkzT8UvI%2BI8FVqK7Ch0MDGfTp1f8HaUixpMv0eug%2BTHs2QKZ1t1DjC2Eh%2F8gwxQh3QL34j7vSXIJQoSGPXhw8W%2FMCnfkD%2FieEztRPO8hG2y8bChe1UCH5W8cMXtYG%2F1ZAWj%2BBXU8Jgi%2Bf16tCPXNnZ4B%2BBs3lPWnblE%2BaJNzTa7Y2adYzV3hCfmUKqxZcFg9MQWoRkkfPsUHafciUSULoQi33EHdXWaXSEp%2BP3%2FU%2BUjjskVgMtsfbNf8k7BiEimFVniX7FhA9AhTkw4vz6jAY6pAEYnKzXQy9zLGa9aW1iI%2B7FBq5M5qDRf4jq%2FWKT42eRsAFJJO0VHsF%2FKSjNXHSiRU4lflClH7ISsmJadBcSK3GXDT%2FdgR7miSkfeAwVDZZd%2FUdD3ZDNbSdj6mEK4ls%2BPuUq4FxZb5CYbkTxiH0W2rmgA6WynRsIQNELExi3lopcNOM4Ug%2FjRqJ6KupWrgnB96pcKT8Dg9Wfhn0fKkXCu9XBTVnMgQ%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20211124T232926Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Credential=ASIA25DCYHY3YJYHVE7N%2F20211124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=20a203ff0ab0d3166067fd191735036ee60ff80746a34874ae4b02dcf91099bf"
+    },
+    "Version": 1,
+    "CompatibleRuntimes": [
+        "python3.9"
+    ]
+}
