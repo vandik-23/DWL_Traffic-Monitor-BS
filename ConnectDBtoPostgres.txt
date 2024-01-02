@@ -1,0 +1,16 @@
+# Source:https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToPostgreSQLInstance.html
+
+#Connection details RDS:
+RDSendpoint: database-1-instance-1.cvqnug2g93ia.us-east-1.rds.amazonaws.com
+username: postgresadmin
+dbname:db_holiday
+
+# To install the psql client on Amazon Linux 2:
+sudo amazon-linux-extras install postgresql14
+
+# To connect to the Postgres database:
+psql --host=<RDSendpoint> --port=5432 --username=<unsername> --password --dbname=<dbname>
+psql --host=database-1-instance-1.cvqnug2g93ia.us-east-1.rds.amazonaws.com --port=5432 --username=postgresadmin --password --dbname=db_holiday
+# Login to Postgres sql server:
+psql -U
+
