@@ -13,7 +13,7 @@ By addressing the challenge of anticipating pedestrian and cyclist traffic in Ba
  - [Data Source & Description](https://data.bs.ch/explore/dataset/100294/information/?sort=timestamp)
  - [Open Data API](https://data.bs.ch/api/explore/v2.1/catalog/datasets/100294/records?limit=20)
 
-### 3. Public Holiday Days: Open Holuday API:
+### 3. Public Holiday Days: Open Holiday API:
  - [Data Source & Description](https://www.openholidaysapi.org/de/)
  - [Open Data API](https://openholidaysapi.org/swagger/index.html)
 
