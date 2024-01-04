@@ -52,4 +52,4 @@ Meteonorm contains historic data points from 2020-2023: API for Measurements | W
 
 ## Output:
 
-- [Public Dashboard](https://public.tableau.com/views/DWLadiesBaselTrafficMonitorFinal/BaselTrafficMonitor?:language=en-US&:display_count=n&:origin=viz_share_link)
+- [Traffic Monitor Tableau Public Dashboard](https://public.tableau.com/views/DWLadiesBaselTrafficMonitorFinal/BaselTrafficMonitor?:language=en-US&:display_count=n&:origin=viz_share_link)
