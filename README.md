@@ -23,7 +23,7 @@ By addressing the challenge of anticipating pedestrian and cyclist traffic in Ba
 Meteonorm contains historic data points from 2020-2023: API for Measurements | Weather API
 
 
-## Pipeline:
+## Data Architecture Pipeline:
 
 ![Pipeline Architecture](https://github.com/vandik-23/DWLadies/blob/main/Pipeline_Architecture.png)
 
@@ -60,7 +60,7 @@ Meteonorm contains historic data points from 2020-2023: API for Measurements | W
 | 2     | [SQL Queries]( Code Link ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
 
 
-## Output:
+## Traffic Monitor Dashboard
 
 
 ![Tableau Public](https://public.tableau.com/app/assets/tableau-public-logo-rgb.07774149.svg)
