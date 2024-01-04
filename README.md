@@ -1,8 +1,6 @@
-# DWLadies 
+# Project: Basel Traffic Monitor
 
-## Project: Basel Traffic Monitor
-
-### Description:
+## Description:
 By addressing the challenge of anticipating pedestrian and cyclist traffic in Basel, we aim to create a data pipeline that seamlessly integrates public traffic information, holiday information and real-time weather data. This initiative will provide actionable insights for urban businesses to make informed decisions and optimize operations based on anticipated footfall and bicycle counts.
 
 ## Data Sources / Dynamic & Static APIs:
@@ -28,6 +26,8 @@ By addressing the challenge of anticipating pedestrian and cyclist traffic in Ba
 
 1. Static Data Ingestion:
 
+| Nr. | File                                                                                                                                           | Author                                                      |
+|-------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | 1     | [Data Lake Traffic]( Code Link ) | [Nina M.]( page link )                      |
 | 2     | [Data Lake Weather]( https://github.com/vandik-23/DWLadies/blob/main/Weather_API_Connection.ipynb ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
 | 3     | [Data Lake Holiday]( https://github.com/vandik-23/DWLadies/blob/main/Holiday_API_Connection.ipynb ) | [Andrea V.]( https://github.com/vandik-23 )                      |
