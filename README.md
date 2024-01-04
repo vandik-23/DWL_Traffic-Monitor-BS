@@ -25,7 +25,7 @@ Meteonorm contains historic data points from 2020-2023: API for Measurements | W
 
 ## Pipeline:
 
-![Pipeline Architecture]([url_to_image](https://github.com/vandik-23/DWLadies/blob/main/Pipeline_Architecture.png))
+![Pipeline Architecture](https://github.com/vandik-23/DWLadies/blob/main/Pipeline_Architecture.png)
 
 ### 1. Static Data Ingestion:
 
