@@ -29,7 +29,7 @@ Meteonorm contains historic data points from 2020-2023: API for Measurements | W
 
 | Nr. | Code                                                                                                                                           | Author                                                      |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| 1     | [Data Lake Traffic]( Code Link ) | [Nina M.]( page link )                      |
+| 1     | [Data Lake Traffic]( Code Link ) | [Nina M.]( https://github.com/nmerryw )                      |
 | 2     | [Data Lake Weather]( https://github.com/vandik-23/DWLadies/blob/main/Weather_API_Connection.ipynb ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
 | 3     | [Data Lake Holiday]( https://github.com/vandik-23/DWLadies/blob/main/Holiday_API_Connection.ipynb ) | [Andrea V.]( https://github.com/vandik-23 )                      |
 |      | [AWS Lambda Layer]( https://github.com/vandik-23/DWLadies/blob/main/install_lambda_layer_python_3.9.txt ) | [Andrea V.]( https://github.com/vandik-23 )                      |
