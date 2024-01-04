@@ -49,7 +49,7 @@ Meteonorm contains historic data points from 2020-2023: API for Measurements | W
 | Nr. | Code                                                                                                                                           | Author                                                      |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | 1     | [Traffic Data]( Code Link ) | [Nina M.]( https://github.com/nmerryw )                      |
-| 2     | [Mage_pipeline](https://github.com/vandik-23/DWLadies/tree/Mage_Pipeline) | [Natalie B.]( https://github.com/nbarnett19 )                      |
+| 2     | [Mage_pipeline](https://github.com/vandik-23/DWLadies/tree/main/Mage_pipeline) | [Natalie B.]( https://github.com/nbarnett19 )                      |
 | 3     | [Holiday Data Transformation: Apache Airflow DAG]( https://github.com/vandik-23/DWLadies/blob/main/Holiday_DAG.py ) | [Andrea V.]( https://github.com/vandik-23 )                      |
 
 ### 4. Data Visualization:
@@ -58,7 +58,7 @@ Meteonorm contains historic data points from 2020-2023: API for Measurements | W
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | 1     | [SQL Queries]( Code Link ) | [Nina M.]( https://github.com/nmerryw )                      |
 | 2     | [SQL Queries]( Code Link ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
-| 3     | [SQL Queries]( Code Link ) | [Andrea V.]( https://github.com/vandik-23 )                      |
+
 
 ## Output:
 
