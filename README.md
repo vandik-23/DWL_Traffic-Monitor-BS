@@ -29,26 +29,26 @@ Meteonorm contains historic data points from 2020-2023: API for Measurements | W
 
 | Nr. | Code                                                                                                                                           | Author                                                      |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| 1     | [Data Lake Traffic]( Code Link ) | [Nina M.]( https://github.com/nmerryw )                      |
-| 2     | [Data Lake Weather]( https://github.com/vandik-23/DWLadies/blob/main/Weather_API_Connection.ipynb ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
-| 3     | [Data Lake Holiday]( https://github.com/vandik-23/DWLadies/blob/main/Holiday_API_Connection.ipynb ) | [Andrea V.]( https://github.com/vandik-23 )                      |
+| 1     | [Traffic]( Code Link ) | [Nina M.]( https://github.com/nmerryw )                      |
+| 2     | [Weather API Connection]( https://github.com/vandik-23/DWLadies/blob/main/Weather_API_Connection.ipynb ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
+| 3     | [Open Holiday API Connection]( https://github.com/vandik-23/DWLadies/blob/main/Holiday_API_Connection.ipynb ) | [Andrea V.]( https://github.com/vandik-23 )                      |
 |      | [AWS Lambda Layer]( https://github.com/vandik-23/DWLadies/blob/main/install_lambda_layer_python_3.9.txt ) | [Andrea V.]( https://github.com/vandik-23 )                      |
 
 ### 2. Dynamic Updates by AWS Lambda Functions:
 
 | Nr. | Code                                                                                                                                           | Author                                                      |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| 1     | [Data Lake Traffic]( Code Link ) | [Nina M.]( https://github.com/nmerryw )                      |
-| 2     | [Data Lake Weather]( https://github.com/vandik-23/DWLadies/blob/main/Weather_Lambda_Function.ipynb ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
-| 3     | [Data Lake Holiday]( https://github.com/vandik-23/DWLadies/blob/main/Holiday_Lambda_Function.ipynb ) | [Andrea V.]( https://github.com/vandik-23 )                      |
+| 1     | [Traffic Lambda Function]( Code Link ) | [Nina M.]( https://github.com/nmerryw )                      |
+| 2     | [Weather Lambda Function]( https://github.com/vandik-23/DWLadies/blob/main/Weather_Lambda_Function.ipynb ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
+| 3     | [Holiday Lambda Function]( https://github.com/vandik-23/DWLadies/blob/main/Holiday_Lambda_Function.ipynb ) | [Andrea V.]( https://github.com/vandik-23 )                      |
 
 ### 3. Data Transformation:
 
 | Nr. | Code                                                                                                                                           | Author                                                      |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| 1     | [Data Lake Traffic]( Code Link ) | [Nina M.]( https://github.com/nmerryw )                      |
-| 2     | [Data Lake Weather]( Code Link ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
-| 3     | [Holiday Data: Apache Airflow DAG]( https://github.com/vandik-23/DWLadies/blob/main/Holiday_DAG.py ) | [Andrea V.]( https://github.com/vandik-23 )                      |
+| 1     | [Traffic Data]( Code Link ) | [Nina M.]( https://github.com/nmerryw )                      |
+| 2     | [Weather Data Mage]( Code Link ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
+| 3     | [Holiday Data Transformation: Apache Airflow DAG]( https://github.com/vandik-23/DWLadies/blob/main/Holiday_DAG.py ) | [Andrea V.]( https://github.com/vandik-23 )                      |
 
 ## Output:
 
