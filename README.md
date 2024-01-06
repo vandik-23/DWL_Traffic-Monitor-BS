@@ -40,7 +40,7 @@ Meteonorm contains historic data points from 2020-2023: API for Measurements | W
 
 | Nr. | Code                                                                                                                                           | Author                                                      |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| 1     | [Traffic Lambda Function]( Code Link ) | [Nina M.]( https://github.com/nmerryw )                      |
+| 1     | [Traffic Lambda Function]( https://github.com/vandik-23/DWLadies/blob/main/Traffic/api_to_datalake_ETL_lambda.ipynb ) | [Nina M.]( https://github.com/nmerryw )                      |
 | 2     | [Weather Lambda Function]( https://github.com/vandik-23/DWLadies/blob/main/Weather_Lambda_Function.ipynb ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
 | 3     | [Holiday Lambda Function]( https://github.com/vandik-23/DWLadies/blob/main/Holiday_Lambda_Function.ipynb ) | [Andrea V.]( https://github.com/vandik-23 )                      |
 
@@ -48,8 +48,8 @@ Meteonorm contains historic data points from 2020-2023: API for Measurements | W
 
 | Nr. | Code                                                                                                                                           | Author                                                      |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| 1     | [Traffic Data]( Code Link ) | [Nina M.]( https://github.com/nmerryw )                      |
-| 2     | [Mage_pipeline](https://github.com/vandik-23/DWLadies/tree/main/Mage_pipeline) | [Natalie B.]( https://github.com/nbarnett19 )                      |
+| 1     | [Traffic Data]( https://github.com/vandik-23/DWLadies/blob/main/Traffic/lake_to_warehouse_lambda.ipynb ) | [Nina M.]( https://github.com/nmerryw )                      |
+| 2     | [Mage_pipeline]( https://github.com/vandik-23/DWLadies/tree/main/Mage_pipeline) | [Natalie B.]( https://github.com/nbarnett19 )                      |
 | 3     | [Holiday Data Transformation: Apache Airflow DAG]( https://github.com/vandik-23/DWLadies/blob/main/Holiday_DAG.py ) | [Andrea V.]( https://github.com/vandik-23 )                      |
 
 ### 4. Data Visualization:
