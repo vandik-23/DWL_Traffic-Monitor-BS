@@ -56,8 +56,8 @@ Meteonorm contains historic data points from 2020-2023: API for Measurements | W
 
 | Nr. | Code                                                                                                                                           | Author                                                      |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| 1     | [SQL Queries]( Code Link ) | [Nina M.]( https://github.com/nmerryw )                      |
-| 2     | [SQL Queries]( Code Link ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
+| 1     | [Dashboard Queries]( https://github.com/vandik-23/DWLadies/blob/main/Visualization_queries/dashboard_queries.sql ) | [Nina M.]( https://github.com/nmerryw )                      |
+| 2     | [Weather Traffic Queries]( https://github.com/vandik-23/DWLadies/blob/main/Visualization_queries/dashboard_queries.sql ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
 
 
 ## Traffic Monitor Dashboard
