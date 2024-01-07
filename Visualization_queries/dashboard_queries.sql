@@ -164,3 +164,110 @@ JOIN
     location l ON mt.zst_id = l.zst_id
 ORDER BY
     mt.zst_id, mt.traffictype, mt.year, mt.month;
+
+-----------------------------------------------------
+/* Q:03 Peak times and months. These queries aggregate the data by monthly, daily and hourly averages. */
+
+CREATE VIEW q03_avg_monthly_traffic AS
+WITH traffic_summary AS (
+    SELECT
+        tt.zst_id,
+        tt.traffictype,
+        TO_CHAR(tt.datetimefrom, 'Month') AS month,
+        EXTRACT(MONTH FROM tt.datetimefrom) AS month_number,
+        SUM(tt.total_sum) AS total_traffic
+    FROM
+        traffic_table tt
+    WHERE
+        tt.traffictype IN ('Fussgänger', 'Velo')
+    GROUP BY
+        tt.zst_id, tt.traffictype, month, month_number
+),
+location_info AS (
+    SELECT
+        l.zst_id,
+        l.sitename,
+        l.latitude,
+        l.longitude
+    FROM
+        location l
+)
+SELECT
+    ts.zst_id,
+    ts.traffictype,
+    ts.month,
+    ts.month_number,
+    li.sitename,
+    li.latitude,
+    li.longitude,
+    AVG(ts.total_traffic) AS avg_traffic_per_month
+FROM
+    traffic_summary ts
+JOIN
+    location_info li ON ts.zst_id = li.zst_id
+GROUP BY
+    ts.zst_id, ts.traffictype, ts.month, ts.month_number, li.sitename, li.latitude, li.longitude
+ORDER BY
+    ts.traffictype, ts.month_number;
+
+----------------------------------------
+
+CREATE VIEW q03_avg_daily_traffic_weekdays AS
+WITH daily_traffic_summary AS (
+    SELECT
+        t.zst_id,
+        t.traffictype,
+        date_trunc('day', t.datetimefrom) AS day,
+        l.sitename,
+        l.latitude,
+        l.longitude,
+        SUM(t.total_sum) AS total_sum_daily
+    FROM
+        traffic_table t
+        JOIN location l ON t.zst_id = l.zst_id  
+    WHERE
+        t.traffictype IN ('Velo', 'Fussgänger')
+    GROUP BY
+        date_trunc('day', t.datetimefrom), t.zst_id, t.traffictype, l.sitename, l.latitude, l.longitude
+)
+SELECT
+    zst_id,
+    traffictype,
+    EXTRACT(ISODOW FROM day) AS weekday,
+    TO_CHAR(day, 'Day') AS weekday_name,
+    AVG(total_sum_daily) AS avg_total_weekday_over_years,
+    sitename,
+    latitude,
+    longitude
+FROM
+    daily_traffic_summary
+WHERE
+    traffictype IN ('Velo', 'Fussgänger')
+GROUP BY
+    zst_id, traffictype, weekday, weekday_name, sitename, latitude, longitude
+ORDER BY
+    weekday, zst_id, traffictype;
+
+-------------------------------------------------
+
+CREATE VIEW q03_avg_hourly_traffic AS
+SELECT
+  l.sitename,
+  l.latitude,
+  l.longitude,
+  t.zst_id,
+  t.traffictype,
+  d.hourfrom,
+  AVG(t.total_sum) AS avg_total_sum
+FROM
+  traffic_table t
+  JOIN datetime d ON t.datetimefrom = d.datetimefrom
+  JOIN location l ON t.zst_id = l.zst_id
+WHERE
+  t.traffictype IN ('Velo', 'Fussgänger')
+GROUP BY
+  l.sitename, l.latitude, l.longitude, t.zst_id, t.traffictype, d.hourfrom
+ORDER BY
+  l.sitename, t.zst_id, t.traffictype, d.hourfrom;
+
+
