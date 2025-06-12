@@ -32,7 +32,7 @@ Meteonorm contains historic data points from 2020-2023: API for Measurements | W
 | Nr. | Code                                                                                                                                           | Author                                                      |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | 1     | [Traffic](https://github.com/vandik-23/DWLadies/blob/main/Traffic/etl_traffic_historic.ipynb) | [Nina M.]( https://github.com/nmerryw )                      |
-| 2     | [Weather API Connection]( https://github.com/vandik-23/DWLadies/blob/main/Weather_API_Connection.ipynb ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
+| 2     | [Weather API Connection]( https://github.com/vandik-23/DWL_Traffic-Monitor-BS/blob/main/Mage_pipeline/weather_api_load.py ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
 | 3     | [Open Holiday API Connection]( https://github.com/vandik-23/DWLadies/blob/main/Holiday_API_Connection.ipynb ) | [Andrea V.]( https://github.com/vandik-23 )                      |
 
 
@@ -41,7 +41,7 @@ Meteonorm contains historic data points from 2020-2023: API for Measurements | W
 | Nr. | Code                                                                                                                                           | Author                                                      |
 |-------|---------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
 | 1     | [Traffic Lambda Function]( https://github.com/vandik-23/DWLadies/blob/main/Traffic/api_to_datalake_ETL_lambda.ipynb ) | [Nina M.]( https://github.com/nmerryw )                      |
-| 2     | [Weather Lambda Function]( https://github.com/vandik-23/DWLadies/blob/main/Weather_Lambda_Function.ipynb ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
+| 2     | [Weather Lambda Function]( https://github.com/vandik-23/DWL_Traffic-Monitor-BS/blob/main/Weather/Weather_Lambda_Function.ipynb ) | [Natalie B.]( https://github.com/nbarnett19 )                      |
 | 3     | [Holiday Lambda Function]( https://github.com/vandik-23/DWLadies/blob/main/Holiday_Lambda_Function.ipynb ) | [Andrea V.]( https://github.com/vandik-23 )                      |
 
 ### 3. Data Transformation:
